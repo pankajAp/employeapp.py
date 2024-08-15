@@ -1,36 +1,56 @@
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background: linear-gradient(to right, #f4f4f4, #e0e0e0);
+    color: #333;
 }
 
+/* Header Styles */
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem;
+    background: #1e2a38;
+    color: #f4f4f4;
+    padding: 1.5rem;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+/* Navigation Styles */
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 nav ul li {
     display: inline;
-    margin-right: 15px;
+    margin-right: 20px;
 }
 
 nav ul li a {
-    color: #fff;
+    color: #f4f4f4;
     text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
+nav ul li a:hover {
+    color: #4db6ac;
+}
+
+/* Table Styles */
 table {
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 table, th, td {
@@ -38,33 +58,65 @@ table, th, td {
 }
 
 th, td {
-    padding: 10px;
+    padding: 12px;
     text-align: left;
 }
 
+th {
+    background: #4db6ac;
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+tr:hover {
+    background: #e0f2f1;
+}
+
+/* Form Styles */
 form {
     margin: 20px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 label {
     display: block;
     margin-top: 10px;
+    font-weight: bold;
 }
 
 input[type="text"], input[type="password"], input[type="number"], input[type="date"], textarea {
-    width: 100%;
-    padding: 8px;
+    width: calc(100% - 16px);
+    padding: 10px;
     margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, input[type="number"]:focus, input[type="date"]:focus, textarea:focus {
+    border-color: #4db6ac;
+    box-shadow: 0 0 4px rgba(77, 182, 172, 0.5);
+    outline: none;
 }
 
 input[type="submit"] {
-    padding: 10px 20px;
-    background-color: #333;
+    padding: 12px 24px;
+    background-color: #4db6ac;
     color: #fff;
     border: none;
+    border-radius: 4px;
     cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
 }
 
 input[type="submit"]:hover {
-    background-color: #555;
+    background-color: #00796b;
 }
