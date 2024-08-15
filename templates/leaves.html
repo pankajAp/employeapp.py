@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}Leaves{% endblock %}
+
+{% block content %}
+<h2>Leaves</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Leave ID</th>
+            <th>Employee ID</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Type</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for leave in leaves %}
+        <tr>
+            <td>{{ leave.leave_id }}</td>
+            <td>{{ leave.emp_id }}</td>
+            <td>{{ leave.leave_start_date }}</td>
+            <td>{{ leave.leave_end_date }}</td>
+            <td>{{ leave.leave_type }}</td>
+            <td>{{ leave.leave_status }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

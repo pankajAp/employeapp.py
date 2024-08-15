@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}Employees{% endblock %}
+
+{% block content %}
+<h2>Employees</h2>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Full Name</th>
+            <th>Address</th>
+            <th>Contact</th>
+            <th>Username</th>
+            <th>Department</th>
+            <th>Created Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for employee in employees %}
+        <tr>
+            <td>{{ employee.emp_id }}</td>
+            <td>{{ employee.emp_fullname }}</td>
+            <td>{{ employee.emp_address }}</td>
+            <td>{{ employee.emp_contact }}</td>
+            <td>{{ employee.emp_username }}</td>
+            <td>{{ employee.emp_dept }}</td>
+            <td>{{ employee.created_date }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}Add Leave{% endblock %}
+
+{% block content %}
+<h2>Add Leave</h2>
+<form action="{{ url_for('add_leave') }}" method="post">
+    <label for="emp_id">Employee ID:</label>
+    <input type="number" id="emp_id" name="emp_id" required><br>
+    
+    <label for="leave_start_date">Start Date:</label>
+    <input type="date" id="leave_start_date" name="leave_start_date" required><br>
+    
+    <label for="leave_end_date">End Date:</label>
+    <input type="date" id="leave_end_date" name="leave_end_date" required><br>
+    
+    <label for="leave_type">Type:</label>
+    <input type="text" id="leave_type" name="leave_type" required><br>
+    
+    <label for="leave_status">Status:</label>
+    <input type="text" id="leave_status" name="leave_status" required><br>
+    
+    <input type="submit" value="Add Leave">
+</form>
+{% endblock %}

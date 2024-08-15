@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Employee Positions{% endblock %}
+
+{% block content %}
+<h2>Employee Positions</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Employee ID</th>
+            <th>Position ID</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for emp_pos in employee_positions %}
+        <tr>
+            <td>{{ emp_pos.emp_id }}</td>
+            <td>{{ emp_pos.pos_id }}</td>
+            <td>{{ emp_pos.start_date }}</td>
+            <td>{{ emp_pos.end_date }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

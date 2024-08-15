@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Employee Management System{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Employee Management System</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('employees') }}">Employees</a></li>
+                <li><a href="{{ url_for('positions') }}">Positions</a></li>
+                <li><a href="{{ url_for('employee_positions') }}">Employee Positions</a></li>
+                <li><a href="{{ url_for('leaves') }}">Leaves</a></li>
+                <li><a href="{{ url_for('add_employee') }}">Add Employee</a></li>
+                <li><a href="{{ url_for('add_position') }}">Add Position</a></li>
+                <li><a href="{{ url_for('add_leave') }}">Add Leave</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2024 Employee Management System</p>
+    </footer>
+</body>
+</html>
