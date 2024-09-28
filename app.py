@@ -8,7 +8,7 @@ from datetime import datetime
 app = Flask(__name__)
 
 # Configure SQLAlchemy
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:@localhost/employemanagement'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:@localhost/test'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
